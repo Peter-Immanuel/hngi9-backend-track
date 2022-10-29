@@ -2,9 +2,10 @@ package handler
 
 import (
 	"context"
+	"github.com/gin-gonic/gin"
 	"net/http"
 
-	"github.com/gin-gonic/gin"
+	models "github.com/Peter-Immanuel/hngi9-backend-track/models"
 )
 
 type Handler struct {
@@ -18,6 +19,8 @@ func NewHandler(context context.Context) *Handler {
 }
 
 func (h *Handler) BioHandler(c *gin.Context) {
-	c.IndentedJson(http.StatusOK)
+	myProfile := models.NewBioProfile()
+	myProfile.CreateMyBio()
+	c.IndentedJSON(http.StatusOK, myProfile)
 	return
 }

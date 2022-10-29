@@ -1,4 +1,4 @@
-module hngi9-backend-track
+module github.com/Peter-Immanuel/hngi9-backend-track
 
 go 1.18
 
