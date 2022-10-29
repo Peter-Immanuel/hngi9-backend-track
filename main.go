@@ -9,7 +9,7 @@ var bioHandler *handler.Handler
 
 func main() {
 	router := gin.Default()
-	router.GET("/bio", bioHandler.BioHandler)
+	router.GET("/", bioHandler.BioHandler)
 
 	router.Run()
 }

@@ -1,10 +1,10 @@
 package models
 
 type BioProfile struct {
-	SlackUsername string
-	Backend       bool
-	Age           int
-	Bio           string
+	SlackUsername string `json:"slackUsername"`
+	Backend       bool   `json:"backend"`
+	Age           int    `json:"age"`
+	Bio           string `json:"bio"`
 }
 
 func NewBioProfile() *BioProfile {
