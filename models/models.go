@@ -7,11 +7,11 @@ type BioProfile struct {
 	Bio           string
 }
 
-func (b BioProfile) CreateMyBio() BioProfile{
+func (b BioProfile) CreateMyBio() BioProfile {
 	return BioProfile{
-		 "BemEmma",
-		 true,
-		 22,
-		 "Hello everyone, my name is Bemshima I'm here to have fun with golang"
+		"BemEmma",
+		true,
+		22,
+		"Hello everyone, my name is Bemshima I'm here to have fun with golang",
 	}
 }
