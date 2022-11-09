@@ -10,6 +10,7 @@ var bioHandler *handler.Handler
 func main() {
 	router := gin.Default()
 	router.GET("/", bioHandler.BioHandler)
+	router.POST("/", bioHandler.ArithmeticOperation)
 
 	router.Run()
 }

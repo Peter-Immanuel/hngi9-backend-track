@@ -7,6 +7,38 @@ type BioProfile struct {
 	Bio           string `json:"bio"`
 }
 
+type OperationType string
+
+const (
+	Addition OperationType = OperationType(iota)
+	Subtraction
+	Multiplication
+)
+
+func (operation OperationType) String() string {
+	switch operation {
+	case Addition:
+		return "addition"
+	case Subtraction:
+		return "subtraction"
+	case Multiplication:
+		return "multiplication"
+	}
+	return "unknown"
+}
+
+type OperationRequest struct {
+	OperationType OperationType `json:"operation_type"`
+	X             int64         `json:"x"`
+	Y             int64         `json:"y"`
+}
+
+type OperationResponse struct {
+	SlackUsername string `json:"slackUsername"`
+	Result        int64  `json:"result"`
+	OperationType string `json:"operation_type"`
+}
+
 func NewBioProfile() *BioProfile {
 	return &BioProfile{}
 }
